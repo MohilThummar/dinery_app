@@ -8,7 +8,6 @@ class CustomTextField extends StatelessWidget {
   final Color? hintColor;
   final Color? color;
   final double? fontSize;
-
   final bool? enabled;
   final bool? isDense;
   final TextAlign? textAlign;

@@ -7,11 +7,11 @@ class AppColors {
   static const Color primaryThreeColor = Color(0xFFE17F60);
   static const Color primaryFourColor = Color(0xFFE9A28B);
   static const Color primaryFiveColor = Color(0xFFF1C4B6);
-  static const Color headingeColor = Color(0xFF2F2E2E);
-  static const Color headingeTwoColor = Color(0xFF484747);
-  static const Color headingeThreeColor = Color(0xFF626060);
-  static const Color headingeFourColor = Color(0xFF7B7979);
-  static const Color headingeFiveColor = Color(0xFF959393);
+  static const Color headingColor = Color(0xFF2F2E2E);
+  static const Color headingTwoColor = Color(0xFF484747);
+  static const Color headingThreeColor = Color(0xFF626060);
+  static const Color headingFourColor = Color(0xFF7B7979);
+  static const Color headingFiveColor = Color(0xFF959393);
   static const Color dangerColor = Color(0xFFDE1010);
   static const Color dangerTwoColor = Color(0xFFF03333);
   static const Color dangerThreeColor = Color(0xFFF36262);
