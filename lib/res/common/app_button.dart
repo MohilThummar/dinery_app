@@ -31,7 +31,7 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width ?? Get.width,
+      width: width ?? 367,
       height: height ?? 54,
       child: ElevatedButton(
         onPressed: disableButton == true ? null : onPressed,
@@ -40,46 +40,38 @@ class AppButton extends StatelessWidget {
           backgroundColor: Theme.of(context).primaryColor,
           elevation: 0,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
         child: child ??
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                if (icon != null)
-                  Row(
-                    children: [
-                      Icon(
-                        icon,
-                        color: Colors.white,
-                        size: 24,
-                      ),
-                      const SizedBox(width: 5),
-                    ],
-                  )
-                else
+                if (icon != null) ...[
+                  Icon(
+                    icon,
+                    color: Colors.white,
+                    size: 24,
+                  ),
+                  const SizedBox(width: 5),
+                ] else
                   const SizedBox(),
-                if (image != null && image != "")
-                  Row(
-                    children: [
-                      image!.contains(".svg")
-                          ? SvgPicture.asset(
-                              image!,
-                              height: 22,
-                              color: Colors.white,
-                              alignment: Alignment.bottomLeft,
-                            )
-                          : Image.asset(
-                              image!,
-                              height: 22,
-                              color: Colors.white,
-                              alignment: Alignment.bottomLeft,
-                            ),
-                      const SizedBox(width: 5)
-                    ],
-                  )
-                else
+                if (image != null && image != "") ...[
+                  image!.contains(".svg")
+                      ? SvgPicture.asset(
+                          image!,
+                          height: 22,
+                          color: Colors.white,
+                          alignment: Alignment.bottomLeft,
+                        )
+                      : Image.asset(
+                          image!,
+                          height: 22,
+                          color: Colors.white,
+                          alignment: Alignment.bottomLeft,
+                        ),
+                  const SizedBox(width: 5)
+                ] else
                   const SizedBox(),
                 if (title != "")
                   Text(

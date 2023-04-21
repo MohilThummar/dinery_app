@@ -12,8 +12,7 @@ class SplashScreen extends GetView<SplashController> {
       body: Center(
         child: Image.asset(
           "assets/images/Group 659.png",
-          height: 50.h,
-          width: 100.w,
+          width: 150.w,
         ),
       ),
     );
