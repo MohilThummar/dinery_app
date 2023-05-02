@@ -10,6 +10,7 @@ class AppButton extends StatelessWidget {
   final double? height;
   final double? fontSize;
   final Widget? child;
+  final Widget? children;
   final bool? disableButton;
   final VoidCallback onPressed;
   final VoidCallback? onLongPress;
@@ -23,6 +24,7 @@ class AppButton extends StatelessWidget {
     this.height,
     this.fontSize,
     this.child,
+    this.children,
     this.disableButton,
     required this.onPressed,
     this.onLongPress,

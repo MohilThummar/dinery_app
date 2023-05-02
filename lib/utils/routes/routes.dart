@@ -1,10 +1,14 @@
 import 'package:dinery_app/utils/routes/routes_name.dart';
-import 'package:dinery_app/view/on_boarding/on_boarding_binding.dart';
+import 'package:dinery_app/view/forget_password/forget_password_screen.dart';
+import 'package:dinery_app/view/log_in/log_in_binding.dart';
+import 'package:dinery_app/view/log_in/log_in_screen.dart';
 import 'package:dinery_app/view/on_boarding/on_boarding_screen.dart';
 import 'package:dinery_app/view/splash/splash_binding.dart';
 import 'package:dinery_app/view/splash/splash_screen.dart';
 import 'package:get/get.dart';
 
+import '../../view/forget_password/forget_password_binding.dart';
+import '../../view/on_boarding/on_boarding_binding.dart';
 import '../../view/on_boarding_four/on_boarding_four_binding.dart';
 import '../../view/on_boarding_four/on_boarding_four_screen.dart';
 import '../../view/sign_up/sign_up_binding.dart';
@@ -15,4 +19,6 @@ List<GetPage> page = [
   GetPage(name: onBoardingRoutes, page: () => const OnBoardingScreen(), binding: OnBoardingBinding()),
   GetPage(name: onBoardingFourRoutes, page: () => const OnBoardingFourScreen(), binding: OnBoardingFourBinding()),
   GetPage(name: signUpRoutes, page: () => const SignUpScreen(), binding: SignUpBinding()),
+  GetPage(name: logInRoutes, page: () => const LogInScreen(), binding: LogInBinding()),
+  GetPage(name: forgetPasswordRoutes, page: () => const ForgetPasswordScreen(), binding: ForgetPasswordBinding()),
 ];

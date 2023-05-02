@@ -7,4 +7,5 @@ class AppAssets {
   static const String reservation = "${imagesPath}reservation.png";
   static const String meals = "${imagesPath}meals.png";
   static const String rafiki = "${imagesPath}rafiki.png";
+  static const String password = "${imagesPath}password.png";
 }
