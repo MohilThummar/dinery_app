@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
           darkTheme: AppTheme.darkTheme,
           getPages: page,
           initialRoute: splashRoutes,
+          // textTheme: GoogleFonts.latoTextTheme(),
         );
       },
     );

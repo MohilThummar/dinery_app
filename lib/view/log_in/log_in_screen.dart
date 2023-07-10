@@ -7,6 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../res/constant/app_assets.dart';
+import '../../res/constant/app_strings.dart';
+
 class LogInScreen extends GetView<LogInController> {
   const LogInScreen({Key? key}) : super(key: key);
 
@@ -18,41 +21,41 @@ class LogInScreen extends GetView<LogInController> {
           Padding(
             padding: const EdgeInsets.only(top: 100, right: 150, left: 20).r,
             child: Text(
-              "Welcome back !",
+              AppStrings.welcome,
               style: TextStyle(fontWeight: FontWeight.w800, fontSize: 24.sp),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 15, left: 20).r,
             child: Text(
-              "Enter your details below to log in to your account",
+              AppStrings.loginDetails,
               style: TextStyle(fontWeight: FontWeight.w200, fontSize: 16.sp),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 25, right: 205).r,
             child: Text(
-              "Email address",
+              AppStrings.emailAddress,
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.sp),
             ),
           ),
           10.verticalSpace,
           CustomTextField(
             controller: TextEditingController(),
-            hintText: "example@gmail.com",
+            hintText: AppStrings.email,
             borderVisible: false,
           ),
           Padding(
             padding: const EdgeInsets.only(top: 15, right: 240).r,
             child: Text(
-              "password",
+              AppStrings.password,
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16.sp),
             ),
           ),
           12.verticalSpace,
           CustomTextField(
             controller: TextEditingController(),
-            hintText: "Input Password",
+            hintText: AppStrings.inputPassword,
             borderVisible: false,
             width: 50.w,
             suffixIcon: const Icon(Icons.visibility_off, color: Colors.black),
@@ -71,39 +74,45 @@ class LogInScreen extends GetView<LogInController> {
                   },
                 ),
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    AppStrings.rememberMe,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    textAlign: TextAlign.center,
+                  )
+                ],
+              ),
+              45.horizontalSpace,
               RichText(
                 text: TextSpan(
-                  text: "Remember me",
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
+                  text: AppStrings.forgetPassword,
+                  style: TextStyle(
+                    color: const Color(0xffBA4723),
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w400,
                   ),
-                  children: [
-                    TextSpan(
-                      text: "                        Forgot password ?",
-                      style: const TextStyle(
-                        color: Color(0xffBA4723),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                      ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          Get.toNamed(forgetPasswordRoutes);
-                        },
-                    ),
-                  ],
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      Get.toNamed(forgetPasswordRoutes);
+                    },
                 ),
               ),
             ],
           ),
           30.verticalSpace,
           AppButton(
-            width: 400,
-            title: "Log In",
+            height: 50.h,
+            width: 320.w,
+            title: AppStrings.login,
             fontSize: 14,
             onPressed: () {
-              // Get.toNamed(logInRoutes);
+              Get.toNamed(homeScreenRoutes);
             },
           ),
           10.verticalSpace,
@@ -112,28 +121,28 @@ class LogInScreen extends GetView<LogInController> {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(top: 19).r,
-                  child: const Divider(
+                  child: Divider(
                     color: Colors.black26,
-                    height: 10,
+                    height: 10.h,
                     thickness: 2,
                     endIndent: 20,
                     indent: 15,
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 20),
+              Padding(
+                padding: const EdgeInsets.only(top: 20).r,
                 child: Text(
-                  "Or",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  AppStrings.or,
+                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
                 ),
               ),
-              const Expanded(
+              Expanded(
                 child: Padding(
-                  padding: EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 20).r,
                   child: Divider(
                     color: Colors.black26,
-                    height: 10,
+                    height: 10.h,
                     thickness: 2,
                     endIndent: 20,
                     indent: 15,
@@ -144,21 +153,22 @@ class LogInScreen extends GetView<LogInController> {
           ),
           25.verticalSpace,
           AppButton(
-            width: 400,
-            title: "Sign up with google",
-            fontSize: 14,
+            height: 50.h,
+            width: 320.w,
+            title: AppStrings.signUpGoogle,
+            fontSize: 14.sp,
             onPressed: () {},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/Google.png", height: 20.h, width: 20.w),
+                Image.asset(AppAssets.google, height: 20.h, width: 20.w),
                 10.horizontalSpace,
-                const Text(
-                  "Sign up with google",
+                Text(
+                  AppStrings.signUpGoogle,
                   style: TextStyle(
                     color: Colors.black54,
                     fontWeight: FontWeight.w500,
-                    fontSize: 14,
+                    fontSize: 14.sp,
                   ),
                 ),
               ],
@@ -169,19 +179,19 @@ class LogInScreen extends GetView<LogInController> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RichText(
-                text: const TextSpan(
-                  text: "Don’t have an account? ",
+                text: TextSpan(
+                  text: AppStrings.account,
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w400,
                   ),
                   children: [
                     TextSpan(
-                      text: "Sign up",
+                      text: AppStrings.signup,
                       style: TextStyle(
-                        color: Color(0xffBA4723),
-                        fontSize: 16,
+                        color: const Color(0xffBA4723),
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.w400,
                       ),
                     ),

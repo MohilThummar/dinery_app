@@ -13,6 +13,7 @@ class AppButton extends StatelessWidget {
   final Widget? children;
   final bool? disableButton;
   final VoidCallback onPressed;
+  final Color? backgroundColor;
   final VoidCallback? onLongPress;
 
   const AppButton({
@@ -28,6 +29,7 @@ class AppButton extends StatelessWidget {
     this.disableButton,
     required this.onPressed,
     this.onLongPress,
+    this.backgroundColor,
   });
 
   @override
@@ -39,7 +41,7 @@ class AppButton extends StatelessWidget {
         onPressed: disableButton == true ? null : onPressed,
         onLongPress: disableButton == true ? null : onLongPress,
         style: ElevatedButton.styleFrom(
-          backgroundColor: Theme.of(context).primaryColor,
+          backgroundColor: backgroundColor ?? Theme.of(context).primaryColor,
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),

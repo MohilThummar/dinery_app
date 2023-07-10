@@ -68,7 +68,10 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15).r,
+      padding: const EdgeInsets.only(
+        right: 15,
+        left: 15,
+      ).r,
       child: TextField(
         controller: controller,
         cursorColor: Colors.red,
@@ -97,7 +100,6 @@ class CustomTextField extends StatelessWidget {
         decoration: InputDecoration(
           isDense: isDense,
           suffixIcon: suffixIcon,
-          // contentPadding: const EdgeInsets.only(top: 30, right: 10, left: 15),
           hintText: hintText,
           counter: null,
           counterText: "",
